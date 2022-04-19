@@ -78,12 +78,15 @@ elif user_choice == 3:
         print("Username does not exist, or was entered incorrectly.")
         print()
 
+        
+# FOR TESTING DELETE THE NEXT 6 LINES AFTER YOU DONE TESTING IT. #
 print("SHOWING ALL ACCOUNTS NOW")
 cursor.execute("SELECT * FROM ui")
 for Username, Password in cursor:
     print(Username)
     print(Password)
     print("-" * 20)
-
+#-----------------------------------------------------------------#
+    
 cursor.close()
 db.close()
