@@ -3,8 +3,8 @@ import sqlite3
 print("1. Log into an Existing account. \n2. Create a account. \n3. Delete an existing account.")
 user_choice = int(input("->"))
 
-db = sqlite3.connect("ui.sqlite")
-cursor = db.cursor()
+db = sqlite3.connect("ui.sqlite") # You can change the name of the tabel before you run it from ui to whatever you want. 
+cursor = db.cursor()              # MAKE SURE YOU CHANGE ALL INSTANCES OF THE CURRENT NAME OF THE TABLE IN THE CODE (THIS ONLY APPLIES IF YOU WANNA CHANGE THE TABLES NAME!))
 
 db.execute("CREATE TABLE IF NOT EXISTS ui (Username TEXT, Password TEXT)")
 db.commit()
