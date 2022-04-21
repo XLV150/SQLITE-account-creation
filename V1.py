@@ -31,7 +31,6 @@ if user_choice == 1:
     else:
         print("Password Fail")
         password = False
-    print()
     if username == True and password == True:
         print("Login Success")
         print()
