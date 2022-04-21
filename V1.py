@@ -20,14 +20,24 @@ if user_choice == 1:
     cursor.execute("SELECT Username from ui where Username = '{}' LIMIT 1".format(user1))
     if cursor.fetchone():
         print("Username Success")
+        username = True
     else:
         print("Username Fail")
+        username = False
     cursor.execute("SELECT Password from ui where Password = '{}' LIMIT 1".format(user2))
     if cursor.fetchone():
         print("Password Success")
+        password = True
     else:
         print("Password Fail")
+        password = False
     print()
+    if username == True and password == True:
+        print("Login Success")
+        print()
+    else:
+        print("Login Failed")
+        print()
 
 elif user_choice == 2:
 
