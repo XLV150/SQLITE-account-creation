@@ -50,17 +50,12 @@ elif user_choice == 2:
         print()
     else:
         print("Username Available")
-        cursor.execute("SELECT Password from ui where Password = '{}' LIMIT 1".format(user4))
-        if cursor.fetchone():
-            print("Oops there was an error enter another Password!")
-            print()
-        else:
-            print("Password Success")
-            db.execute("INSERT INTO ui(Username, Password) VALUES('{}', '{}')".format(user3, user4))
-            db.commit()
-            print()
-            print("You have successfully created a new Account!")
-            print()
+        print("Password Success")
+        db.execute("INSERT INTO ui(Username, Password) VALUES('{}', '{}')".format(user3, user4))
+        db.commit()
+        print()
+        print("You have successfully created a new Account!")
+        print()
 
 
 elif user_choice == 3:
@@ -78,7 +73,6 @@ elif user_choice == 3:
         if cursor.fetchone():
             print("Password Success. \nDeleting Account now")
             db.execute("DELETE FROM ui WHERE Username = '{}'".format(user5))
-            db.execute("DELETE FROM ui WHERE Password = '{}'".format(user6))
             db.commit()
             print()
         else:
